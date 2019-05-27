@@ -17,7 +17,7 @@ public class BabysitterTest {
     boolean thrown = false;
 
     @Test
-    public void testStartEndTime() {
+    public void testStartEndTimeRegular() {
         start = "7:00 pm";
         end = "1:00 am";
         bb = new Babysitter(start, end);
@@ -62,7 +62,7 @@ public class BabysitterTest {
     }
 
     @Test
-    public void testStartEndTime2() {
+    public void testStartEndTimeAt0AM() {
         start = "7 pm";
         end = "0 AM";
         bb = new Babysitter(start, end);
@@ -71,7 +71,7 @@ public class BabysitterTest {
     }
 
     @Test
-    public void testStartEndTimeSpecial() {
+    public void testStartEndTimeAt12AM() {
         start = "7 pm";
         end = "12 AM";
         bb = new Babysitter(start, end);
@@ -80,7 +80,7 @@ public class BabysitterTest {
     }
     /** Assuming start end time works  */
     @Test
-    public void testTotalPay() {
+    public void testTotalPayForRegularStartEndTimes() {
         start = "7 pm";
         end = "2 AM";
         bb = new Babysitter(start, end);
@@ -92,7 +92,7 @@ public class BabysitterTest {
 
     /** Assuming start end time works  */
     @Test
-    public void testTotalPaySpecial() {
+    public void testTotalPayForEdgeStartEndTimes() {
         start = "5:00 pm";
         end = "9:00 PM";
         bb = new Babysitter(start, end);
